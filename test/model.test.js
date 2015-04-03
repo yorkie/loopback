@@ -509,7 +509,7 @@ describe.onServer('Remote Methods', function() {
         methodNames = methodNames.concat(method.sharedMethod.aliases || []);
       });
 
-      expect(methodNames).to.have.members([
+      expect(methodNames).to.include.members([
         // NOTE(bajtos) These three methods are disabled by default
         // Because all tests share the same global registry model
         // and one of the tests was enabling remoting of "destroyAll",
